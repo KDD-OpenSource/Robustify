@@ -1,0 +1,8 @@
+{
+  "lr": 0.03,
+  "batch": 100,
+  "depth": 3,
+  "bag": 32,
+  "dataset": 0,
+  "representation": "mnist"
+}

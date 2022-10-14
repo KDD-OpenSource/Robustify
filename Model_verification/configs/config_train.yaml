@@ -1,0 +1,221 @@
+repeat_experiments:                 1
+#ctx:                                'train_crop_3_15'
+#ctx:                                'Code'
+#ctx:                                'train_sineClasses_fcnn'
+ctx:                                'autoencoder_2d_fctdist'
+  #ctx:                                'sineClasses_AE_push_5perc_shift_5perc_points_1borders_10k_10NN_advanced'
+#ctx:                                'sineClasses_AE_push_5perc_20NN_insts'
+#ctx:                                'Train_model_3gaussian_no_reg'
+mode:                               ['train']
+multiple_models:                    Null
+dataset:                            'gaussianClouds'
+#algorithm:                          './models/trained_models/autoencoder_mnist_784_150_10'
+#algorithm:                          './models/trained_models/autoencoder_mnist'
+#algorithm:                          './models/autoencoder_float_test'
+#algorithm:                          './models/autoencoder_mnist_dropout'
+#algorithm:                          './models/autoencoder_predMain_airTemp'
+#algorithm:                          './models/trained_models/autoencoder_gaussianClouds_30_15_6'
+#algorithm:                          './models/trained_models/autoencoder_gaussianClouds_100_50_30_border_fct_dist'
+#algorithm:                          './models/trained_models/autoencoder_test_nan'
+algorithm:                          'autoencoder'
+evaluations:                        [
+    #'parallelQualplots',
+    #'linSubfctBarplots',
+    #'linsubfct_distr',
+    #    'linSub_unifPoints',
+    #    'subfunc_distmat',
+    #    'linsubfct_parallelPlots',
+    #'singularValuePlots',
+    #'closest_linsubfct_plot',
+    #'boundary_2d_plot',
+    #'inst_area_2d_plot',
+    #'border_dist_2d',
+    #'border_dist_sort_plot',
+    #'error_border_dist_plot',
+    #'error_border_dist_plot_colored',
+    #
+    #'error_border_dist_plot_anomalies',
+    #'plot_mnist_samples',
+    #'image_lrp',
+    #'image_feature_imp',
+    #'qual_by_border_dist_plot',
+    #'fct_change_by_border_dist_qual',
+    #'marabou_test',
+    #'bias_feature_imp',
+    #'interpolation_func_diffs_pairs',
+    #'mnist_interpolation_func_diffs_pairs',
+]
+
+datasets:
+    subsample:                      Null
+    num_samples:                    50000
+    synthetic_test_samples:         10000
+    scale:                          False
+    gaussianClouds:
+        file_path:                  './datasets/synthetic/gaussianClouds/fct_dist_2d'
+          #file_path:                  Null
+        num_clouds:                 1
+          #num_samples:                1000
+        num_anomalies:              0
+        spacedim:                   2
+        clouddim:                   2
+    uniformClouds:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/uniformClouds/60'
+        num_clouds:                 3
+          ##num_samples:                1000
+        num_anomalies:              0
+        spacedim:                   60
+        clouddim:                   4
+        noise:                      False
+    sineNoise:
+        #file_path:                  './datasets/synthetic/sineNoise/60'
+        file_path:                  Null
+          #num_samples:                1000
+        num_anomalies:              0
+        spacedim:                   30
+    sineClasses:
+      #file_path:                  './datasets/synthetic/sineClasses/30'
+        file_path:                  Null
+          #num_samples:                10000
+        num_test_anomalies:         200
+        num_train_anomalies:        0
+        spacedim:                   40
+        num_classes:                3
+    moons_2d:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/moons_2d'
+          #num_samples:                2000
+        num_anomalies:              10
+        noise:                      0.1
+    parabola:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/parabola'
+          #num_samples:                2000
+        num_anomalies:              10
+        noise:                      0.1
+        spacedim:                   2
+    mnist:
+        file_path:                  Null
+          #num_samples:                35000
+        num_anomalies:              0
+    cardio:
+        file_path:                  Null
+        num_anomalies:              0
+    pc3:
+        file_path:                  Null
+        num_anomalies:              0
+    spambase:
+        file_path:                  Null
+        num_anomalies:              0
+    steel_plates_fault:
+        file_path:                  Null
+        num_anomalies:              0
+    qsar_biodeg:
+        file_path:                  Null
+        num_anomalies:              0
+    page_blocks:
+        file_path:                  Null
+        num_anomalies:              0
+    ozone_level_8hr:
+        file_path:                  Null
+        num_anomalies:              0
+    gas_drift:
+        file_path:                  Null
+        num_anomalies:              0
+    har:
+        file_path:                  Null
+        num_anomalies:              0
+    ionosphere:
+        file_path:                  Null
+        num_anomalies:              0
+    satellite:
+        file_path:                  Null
+        num_anomalies:              0
+    segment:
+        file_path:                  Null
+        num_anomalies:              0
+    wbc:
+        file_path:                  Null
+        num_anomalies:              0
+    satimage:
+        file_path:                  Null
+        num_anomalies:              0
+    predictiveMaintenance:
+        file_path:                  Null
+          #num_samples:                -1
+        num_anomalies:              0
+        window_size:                50
+    creditcardFraud:
+        file_path:                  Null
+          #num_samples:                -1
+        num_anomalies:              0
+    electricDevices:
+        file_path:                  Null
+    italyPowerDemand:
+        file_path:                  Null
+    ecg5000:
+        file_path:                  Null
+    proximalPhalanxOutlineCorrect:
+        file_path:                  Null
+    sonyAIBORobotSurface1:
+        file_path:                  Null
+    sonyAIBORobotSurface2:
+        file_path:                  Null
+    syntheticControl:
+        file_path:                  Null
+    twoLeadEcg:
+        file_path:                  Null
+    chinatown:
+        file_path:                  Null
+    crop:
+        file_path:                  Null
+        class1:                     4
+        class2:                     12
+    moteStrain:
+        file_path:                  Null
+    melbournePedestrian:
+        file_path:                  Null
+
+algorithms:
+    num_epochs:                     1
+    dynamic_epochs:                 False
+    lr:                             1e-3
+    collect_subfcts:                False
+    save_interm_models:             False
+    push_factor:                    0.1
+    autoencoder:
+        train_robust_ae:            0.0
+        denoising:                  0.0
+        border_dist:                False
+        cross_point_sampling:       False
+          #fct_dist:                   ['mat', 'bias'] # ('mat', 'bias', 'relu')
+        fct_dist:                   ['mat', 'bias'] # ('mat', 'bias', 'relu')
+        fct_dist_layer:             Null #(can return pre and post relu: 5 to
+          #get post relu in middle layer in [24,15,10,15,24])
+        lambda_border:              0.001
+        lambda_fct:                 0.0001
+          #lambda_fct:                 0.001
+        bias_shift:                 Null
+        dropout:                    False
+        L2Reg:                      0.0000
+          #topology:                   [30,15,10,15,30]
+          #topology:                   [2,100,100,100,100,100,2]
+        topology:                   [2,15,30,50,30,15,2]
+        bias:                       True
+        num_border_points:          5
+    deepOcc:
+        #center:                     [0.5,0.5,0.5,0.5,0.5, 0.5,0.5,0.5,0.5,0.5]
+        topology:                   [784,50,50,10]
+          #topology:                   [50,30,2]
+        dropout:                    0.0
+        L2Reg:                      0.0
+        anom_quantile:              0.99
+    fcnnClassifier:
+        topology:                   [50,20,10, 2]
+        dropout:                    0.000005
+        #dropout:                    0.0
+        L2Reg:                      0.0
+    validation:
+        parameter:                  'lambda_border'
+        range:                      [0.00000, 0.0003]

@@ -1,0 +1,113 @@
+#ctx:                                'Code'
+ctx:                                'Test_orig_latent_dist_ratios'
+mode:                               ['test']
+multiple_models:                    './models/trained_models/autoencoder_gaussian_60_1Cloud'
+dataset:                            'gaussianClouds'
+#algorithm:                          './models/trained_models/autoencoder_mnist_784_150_10'
+#algorithm:                          './models/trained_models/autoencoder_mnist'
+#algorithm:                          './models/autoencoder_float_test'
+#algorithm:                          './models/autoencoder_mnist_dropout'
+#algorithm:                          './models/autoencoder_predMain_airTemp'
+#algorithm:                          './models/trained_models/autoencoder_gaussianClouds_30_15_6'
+#algorithm:                          './models/trained_models/autoencoder_gaussianClouds_100_50_30_border_fct_dist'
+#algorithm:                          './models/trained_models/autoencoder_test_nan'
+algorithm:                          'autoencoder'
+evaluations:                        [
+    #'parallelQualplots',
+    #'tsne_latent',
+    #'linSubfctBarplots',
+    #'linsubfct_distr',
+    #    'linSub_unifPoints',
+    #    'subfunc_distmat',
+    #    'linsubfct_parallelPlots',
+    #'singularValuePlots',
+    #'closest_linsubfct_plot',
+    #'boundary_2d_plot',
+    #'inst_area_2d_plot',
+    #'border_dist_2d',
+    #'border_dist_sort_plot',
+    #'error_border_dist_plot',
+    'orig_latent_dist_ratios',
+    #'error_label_mean_dist_plot',
+    #'error_border_dist_plot_colored',
+    #'error_border_dist_plot_anomalies',
+    #'plot_mnist_samples',
+    #'image_lrp',
+    #'image_feature_imp',
+    #'qual_by_border_dist_plot',
+    #'fct_change_by_border_dist_qual',
+    #'marabou_test',
+    #'bias_feature_imp',
+    #'interpolation_func_diffs_pairs',
+    #'mnist_interpolation_func_diffs_pairs',
+]
+
+datasets:
+    subsample:                      Null
+    gaussianClouds:
+        #file_path:                  './datasets/synthetic/gaussianClouds/60'
+        file_path:                  Null
+        num_clouds:                 3
+        num_samples:                1000
+        num_anomalies:              0
+        spacedim:                   60
+        clouddim:                   4
+    uniformClouds:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/uniformClouds/60'
+        num_clouds:                 3
+        num_samples:                1000
+        num_anomalies:              0
+        spacedim:                   60
+        clouddim:                   4
+        noise:                      False
+    moons_2d:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/moons_2d'
+        num_samples:                2000
+        num_anomalies:              10
+        noise:                      0.1
+    parabola:
+        #file_path:                  Null
+        file_path:                  './datasets/synthetic/parabola'
+        num_samples:                2000
+        num_anomalies:              10
+        noise:                      0.1
+        spacedim:                   2
+    mnist:
+        file_path:                  Null
+        num_samples:                35000
+        num_anomalies:              0
+    predictiveMaintenance:
+        file_path:                  Null
+        num_samples:                -1
+        num_anomalies:              0
+        window_size:                50
+    creditcardFraud:
+        file_path:                  Null
+        num_samples:                -1
+        num_anomalies:              0
+
+algorithms:
+    num_epochs:                     50
+    dynamic_epochs:                 True
+    lr:                             1e-3
+    collect_subfcts:                False
+    autoencoder:
+        border_dist:                False
+        fct_dist:                   True
+        lambda_border:              0.005
+        lambda_fct:                 0.005
+        #topology:                   [2,5,5,5,2]
+        topology:                   [784,350,150,50,10,50,150,350,784]
+            # for mnist
+            #topology:                   [29,10,3,10,29]
+            # for creditcard_fraud
+            #topology:                   [50,15,3,15,50]
+            # for predMaintenance
+            #topology:                   [1000,500,250,100,30,20,10,20,30,100, 250,500,1000]
+            #topology:                   [60,30,15,30,60]
+        #topology:                   [30,15,10,15,30]
+        bias:                       True
+        dropout:                    False
+        num_border_points:          1
