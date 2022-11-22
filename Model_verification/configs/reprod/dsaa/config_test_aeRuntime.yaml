@@ -1,0 +1,10 @@
+repeat_experiment:                  1
+ctx:                                'code_test'
+mode:                               ['test']
+test_models:                        './models/trained_models/reprod/dsaa/autoencoder_runtime'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+  'marabou_largest_error',
+  'marabou_robust'
+]

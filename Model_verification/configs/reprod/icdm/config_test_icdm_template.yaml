@@ -1,0 +1,11 @@
+repeat_experiment:                  1
+ctx:                                'dean_wbc_0'
+mode:                               ['test']
+test_models:                        './models/trained_models/dean_wbc'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_ens_normal_rob',
+    #    'marabou_ens_normal_rob_ae',
+    #    'marabou_svdd_normal_rob',
+]

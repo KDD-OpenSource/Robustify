@@ -26,7 +26,11 @@ def init_logging(output_dir="reports/logs"):
     root_logger = logging.getLogger()
     root_logger.setLevel(LOG_LEVEL)
     # Removes previous handlers (required for running pipeline multiple times)
-    root_logger.handlers = []
+    #root_logger.handlers = []
+    handlers = root_logger.handlers.copy()
+    for handler in handlers:
+        root_logger.removeHandler(handler)
+        handler.close()
 
     # Store logs in a log file in reports/logs
     file_handler = logging.FileHandler(log_file_path)  # mode='w'
@@ -37,7 +41,7 @@ def init_logging(output_dir="reports/logs"):
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setFormatter(log_formatter)
     console_handler.setLevel(CONSOLE_LOG_LEVEL)
-    console_handler.addFilter(DebugModuleFilter(["^src\.", "^root$"]))
+    console_handler.addFilter(DebugModuleFilter(["^src\\.", "^root$"]))
     root_logger.addHandler(console_handler)
 
     # Create logger instance for the config file

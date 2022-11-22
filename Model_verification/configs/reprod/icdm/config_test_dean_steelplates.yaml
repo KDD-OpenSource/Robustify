@@ -1,0 +1,9 @@
+repeat_experiment:                  1
+ctx:                                'dean_steel_plates_fault_0'
+mode:                               ['test']
+test_models:                        './models/trained_models/dean_steel_plates_fault'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_ens_normal_rob',
+]

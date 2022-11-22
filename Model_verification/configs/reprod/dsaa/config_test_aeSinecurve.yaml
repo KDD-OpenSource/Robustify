@@ -1,0 +1,7 @@
+repeat_experiment:                  1
+ctx:                                'autoencoder_sineCurve_largest'
+mode:                               ['test']
+test_models:                        './models/trained_models/reprod/dsaa/autoencoder_sinecurve'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        ['marabou_largest_error']

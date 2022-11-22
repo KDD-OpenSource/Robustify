@@ -1,17 +1,7 @@
-repeat_experiments:                 1
-#ctx:                                'remaining_crop_models'
-#ctx:                                'test_robust_stats_moteStrain'
-#ctx:                                'marabou_ens_normal_rob_tot_eps_approx'
-ctx:                                '2d_boundaries'
+repeat_experiment:                  1
+ctx:                                'code_test'
 mode:                               ['test']
-  #multiple_models:                    './models/trained_models/autoencoder_tmp'
-  #multiple_models:                    './models/trained_models/simon_merged'
-  #multiple_models:                    './models/trained_models/simon4'
-multiple_models:                    './models/trained_models/autoencoder_2d_fctdist_1epoch'
-  #multiple_models:                    './models/trained_models/simon_deepsvdd_satimage'
-#multiple_models:                    './models/trained_models/autoencoder_crop_diff_ds'
-#multiple_models:                    Null
-#dataset:                            'melbournePedestrian'
+test_models:                        './models/trained_models/reprod/dsaa/ae_sinecurve'
 dataset:                            'mnist'
 #algorithm:                          './models/trained_models/autoencoder_mnist_784_150_10'
 #algorithm:                          './models/trained_models/autoencoder_mnist'
@@ -64,6 +54,7 @@ evaluations:                        [
     #'singularValuePlots',
     #'closest_linsubfct_plot',
     #'boundary_2d_plot',
+    #'relu_visualization',
     'inst_area_2d_plot',
     #'border_dist_2d',
     #'border_dist_sort_plot',
@@ -120,6 +111,10 @@ datasets:
         num_samples:                1000
         num_anomalies:              0
         spacedim:                   60
+    uniform_2D:
+        #file_path:                  './datasets/synthetic/sineNoise/60'
+        file_path:                  Null
+        num_anomalies:              0
     sineClasses:
         #file_path:                  './datasets/synthetic/sineNoise/60'
         file_path:                  Null

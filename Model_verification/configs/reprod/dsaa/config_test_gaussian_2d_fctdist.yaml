@@ -1,0 +1,7 @@
+repeat_experiment:                  1
+ctx:                                'autoencoder_gaussian_fctdist_2d'
+mode:                               ['test']
+test_models:                        './models/trained_models/reprod/dsaa/autoencoder_gaussian_fct_dist'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        ['inst_area_2d_plot']

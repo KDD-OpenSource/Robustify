@@ -1,0 +1,9 @@
+repeat_experiment:                  1
+ctx:                                'aeens_page_blocks_0'
+mode:                               ['test']
+test_models:                        './models/trained_models/aeens_page_blocks'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_ens_normal_rob_ae',
+]

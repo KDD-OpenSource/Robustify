@@ -1,0 +1,9 @@
+repeat_experiment:                  1
+ctx:                                'dean_mnist'
+mode:                               ['test']
+test_models:                        './models/trained_models/dean_mnist'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_ens_normal_rob',
+]

@@ -1,0 +1,15 @@
+{
+  "batch_size": 32,
+  "verbose": true,
+  "l2_regularizer": 0.0,
+  "dropout_rate": 0.2,
+  "epochs": 50,
+  "optimizer": "adam",
+  "output_activation": "linear",
+  "hidden_activation": "relu",
+  "hidden_neurons": [
+    30,
+    15
+  ],
+  "preprocessing": false
+}

@@ -1,0 +1,45 @@
+repeat_experiment:                  10
+ctx:                                'autoencoder_sinecurve'
+mode:                               ['train']
+test_models:                        Null
+dataset:                            'sineNoise'
+algorithm:                          'autoencoder'
+evaluations:                        []
+
+
+datasets:
+    subsample:                      Null
+    num_samples:                    1000
+    synthetic_test_samples:         10000
+    scale:                          False
+    sineNoise:
+        file_path:                  Null
+        num_anomalies:              0
+        spacedim:                   30
+    proximalPhalanxOutlineCorrect:
+        file_path:                  Null
+    sonyAIBORobotSurface1:
+        file_path:                  Null
+    sonyAIBORobotSurface2:
+        file_path:                  Null
+    twoLeadEcg:
+        file_path:                  Null
+    moteStrain:
+        file_path:                  Null
+
+algorithms:
+    num_epochs:                     50
+    lr:                             1e-3
+    autoencoder:
+        robust_ae:                  0.0
+        denoising:                  0.0
+        fct_dist:                   [] # ('mat', 'bias', 'relu')
+        lambda_fct:                 0.0001
+        border_dist:                False
+        lambda_border:              0.001
+        penal_dist:                 Null
+        dropout:                    False
+        L2Reg:                      0.0000
+        topology:                   [30,110,30]
+        bias:                       True
+        num_border_points:          5

@@ -1,0 +1,9 @@
+repeat_experiment:                  1
+ctx:                                'deepsvdd_steel_plates_fault_0'
+mode:                               ['test']
+test_models:                        './models/trained_models/deepsvdd_steel_plates_fault'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_svdd_normal_rob',
+]

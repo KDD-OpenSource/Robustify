@@ -1,0 +1,9 @@
+repeat_experiment:                  1
+ctx:                                'dean_gas_drift_0'
+mode:                               ['test']
+test_models:                        './models/trained_models/dean_gas_drift'
+dataset:                            Null
+algorithm:                          Null
+evaluations:                        [
+    'marabou_ens_normal_rob',
+]
