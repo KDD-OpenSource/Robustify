@@ -7,9 +7,9 @@ Also take a look at DEAN here: https://github.com/psorus/DEAN
 Note that in order to verify, one must have [Marabou](https://github.com/NeuralNetworkVerification/Marabou) installed.
 
 To verify a given model, first save in it e.g. './models/trained_models/deepsvdd_cardio/models' as demonstrated by the example. Thereafter you can run 
-'''bash
+```bash
 python3 main.py configs/config_test_svdd_cardio.yaml
-'''
+```
 and find the results in './reports'. If you choose to save the model in a different folder you will need to adjust the config file accordingly.
 
 ## Authors/Contributors
