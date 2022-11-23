@@ -1,7 +1,0 @@
-repeat_experiment:                  1
-ctx:                                'autoencoder_gaussian_noreg_2d'
-mode:                               ['test']
-test_models:                        './models/trained_models/reprod/dsaa/autoencoder_gaussian_noreg'
-dataset:                            Null
-algorithm:                          Null
-evaluations:                        ['inst_area_2d_plot']
