@@ -1,4 +1,4 @@
-This repository contains the code and experimental configuration files for the ICDM2022 Paper "Post-Robustifying Deep Anomaly Detection Ensembles by Model Selection"
+This repository contains the code and experimental configuration files for the ICDM2022 Paper [Post-Robustifying Deep Anomaly Detection Ensembles by Model Selection](https://ls9-www.cs.tu-dortmund.de/publications/ICDM2022.pdf)
 
 "Model_training" contains the code for generating the anomaly detectors used for this Paper.
 Also take a look at DEAN here: https://github.com/psorus/DEAN
